@@ -20,6 +20,10 @@ mongoose
     console.error("MongoDB Connection Failed", error.message);
   });
 
+app.get("/", (req,res)=>{
+  res.send("Welcome")
+})
+
 app.get("/api/tasks", getTaskList);
 
 app.post("/api/tasks", createTask);
